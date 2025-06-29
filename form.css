@@ -1,0 +1,98 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: rgb(186, 185, 185);
+}
+form{
+    box-shadow: 0px 0px 7px 10px rgb(224, 223, 223,0.1);
+    background-color: white;
+    border-radius: 10px;
+    margin: 100px 0px 0px 500px;
+    width: 430px;
+    height: 400px;
+    padding: 30px;
+    position: relative;
+p{
+    color: red;
+}
+.in{
+    display: block;
+}
+label{
+    font-size: 30px;
+}
+.if{
+    display: flex;
+}
+input{
+    width: 350px;
+    font-size: larger;
+    border-radius: 5px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    position: relative;
+}
+i{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: -50px;
+    position: absolute;
+}
+button{
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    border: 0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    margin-top: 30px;
+    width: 350px;
+    background-color: blue;
+}
+}
+
+
+.pops{
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 0px 7px 10px rgb(224, 223, 223,0.1);
+    background-color: white;
+    border-radius: 10px;
+    margin: -350px 0px 0px -30px;
+    width: 430px;
+    height: 400px;
+    padding: 30px;
+    display: block;
+    position: absolute;
+    visibility: hidden;
+
+    i{
+       
+        font-size: 90px;
+        color: green;
+    }
+    img{
+       margin-top: 100px;
+    }
+    button{
+    cursor: pointer;
+    font-size: 23px;
+    border: 0;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 7px;
+    width: 200px;
+    background-color: green;
+    position: relative;
+    }
+} 
+
+.show{
+    visibility: visible;
+}
+

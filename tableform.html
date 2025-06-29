@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="tableform.css" rel="stylesheet" />
+    <title>Tableform</title>
+</head>
+<body>
+    <div class="tableform">
+        <form id="form">
+            <h1>Fill your details</h1>
+            <div>
+                <label>Username : </label> <br>
+                <input type="text" placeholder="Enter your Username" id="Username">
+                <div class="error"></div>
+            </div>
+            <div>
+                <label>Email : </label><br>
+                <input type="email" placeholder="Enter your Email" id="Useremail">
+                <div class="error"></div>
+            </div>
+            <div>
+                <label>Password : </label><br>
+                <input type="password" placeholder="Enter your Password" id="Userpassword">
+                <div class="error"></div>
+            </div>
+            <div>
+                <label>Confirm Password : </label><br>
+                <input type="password" placeholder="Confirm your Password" id="Confirmpassword">
+                <div class="error"></div>
+            </div>
+            <button type="submit" class="submit">Submit</button>
+        </form>
+        <div class="ta">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Eamil</th>
+                    <th>Password</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="root">
+            </tbody>
+        </table>
+        <div class="btn">
+                <button type="button" class="pdf" id="pdf">PDF</button>
+                <button type="button" class="exl" id="xl">XL</button>
+        </div>
+        </div>
+    </div>
+<script src="tableform.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="form.css">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <div class="in">
+            <label>Username : </label>
+            <div class="if"></div><input placeholder="enter your username" type="text" id="inalue"></div>
+        </div>
+        <div class="in">
+            <label>Password : </label>
+            <input placeholder="enter your password" id="inpvalue" type="password" ><i class="fa-solid fa-eye-slash" id="changeimage" onclick="onopen()"></i>
+            <p id="error"></p>
+        </div>
+        <button type="button" onclick="onSubmit()">Submit</button>
+
+    <div class="show">
+        <div class="pops" id="popup">
+            <i class="fa-regular fa-circle-check"></i><br>
+            <img src="" alt="" id="qrimage" width="100px" height="100px"><br>
+            <button type="button" onclick="onBack()">ok</button>
+        </div>
+    </div>
+
+    </form>
+
+    <script src="form.js"></script>
+</body>
+</html>
