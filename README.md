@@ -55,14 +55,22 @@ A JavaScript project created during my training at Amaravathi Software Innovatio
 
 ## Screenshots
 
-![Empty Form State](/screenshots/form-empty.png)
+![Empty Form State](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-06-29%20104135.png)
 *Initial form state with placeholders*
 
-![Validation Errors](/screenshots/form-errors.png)
+![Empty Form State](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-06-29%20110603.png)
 *Form showing validation error messages*
 
-![Filled Form with Table](/screenshots/form-filled.png)
+![Empty Form State](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-06-29%20111016.png)
 *Submitted data displayed in table format*
+
+![Empty Form State](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-06-29%20111032.png)
+
+
+![Empty Form State](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-06-29%20111114.png)
+
+
+![Empty Form State](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-06-29%20111207.png)
 
 ## Technologies Used
 
