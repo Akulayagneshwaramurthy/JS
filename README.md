@@ -28,3 +28,64 @@ A simple login form implementation with password visibility toggle functionality
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/login-form.git
+
+
+
+   # Interactive Form with Data Table
+
+A JavaScript project created during my training at Amaravathi Software Innovations Pvt. Ltd. that demonstrates form validation, dynamic table generation, and data export functionality.
+
+## Features
+
+- **Form Validation**:
+  - Checks for empty fields
+  - Validates email format
+  - Confirms password matching
+  - Displays error messages for invalid inputs
+
+- **Dynamic Table Generation**:
+  - Automatically displays submitted form data in a table
+  - Includes name, email, and password columns
+  - Provides delete action for each row
+
+- **Data Export**:
+  - PDF export functionality
+  - Excel (XL) export functionality
+  - Preserves table data formatting
+
+## Screenshots
+
+![Empty Form State](/screenshots/form-empty.png)
+*Initial form state with placeholders*
+
+![Validation Errors](/screenshots/form-errors.png)
+*Form showing validation error messages*
+
+![Filled Form with Table](/screenshots/form-filled.png)
+*Submitted data displayed in table format*
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- [Library/Framework Name] (if any used for PDF/XL export)
+
+## How to Use
+
+1. Fill in all form fields (Username, Email, Password, Confirm Password)
+2. Click Submit button
+3. View your data in the table below
+4. Use Delete buttons to remove entries
+5. Export data using PDF or XL buttons
+
+## Future Enhancements
+
+- Add edit functionality for table rows
+- Implement password strength meter
+- Add sorting/filtering to the table
+- Include user authentication
+
+## Acknowledgments
+
+Thanks to Amaravathi Software Innovations Pvt. Ltd. for the training opportunity and guidance in developing this project.
