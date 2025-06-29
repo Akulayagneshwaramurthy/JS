@@ -21,7 +21,7 @@ A simple login form implementation with password visibility toggle functionality
 
 ![Login Form](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-06-29%20104100.png)
 ![Form with Password Visible](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-06-29%20104108.png)
-![Form with popup and scanner](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-06-29%20104114.png)
+![Form with popup and scanner](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-06-29%20104116.png)
 
 ## Installation
 
