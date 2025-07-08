@@ -106,9 +106,9 @@ A simple and stylish To-Do List app built with **HTML, CSS, and JavaScript**. Th
 
 ![Preview](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-07-08%20101301.png) <!-- You can upload a short gif or screenshot here -->
 
-![Preview](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-07-08%20101239.png)
+![Preview](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-07-08%20101249.png)
 
-![Preview](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-07-08%20101439.png)
+![Preview](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-07-08%20101239.png)
 
 ## 🚀 Features
 
