@@ -97,3 +97,32 @@ A JavaScript project created during my training at Amaravathi Software Innovatio
 ## Acknowledgments
 
 Thanks to Amaravathi Software Innovations Pvt. Ltd. for the training opportunity and guidance in developing this project.
+
+
+
+# 📝 To-Do List Web App
+
+A simple and stylish To-Do List app built with **HTML, CSS, and JavaScript**. This project is part of my front-end development practice to master JavaScript DOM manipulation and dynamic UI handling.
+
+![Preview](preview.gif) <!-- You can upload a short gif or screenshot here -->
+
+## 🚀 Features
+
+- ✅ Add new tasks instantly
+- 🗑️ Delete tasks with a single click (with trash icon)
+- 💾 Local state using arrays
+- 💡 Clean, minimal, and mobile-responsive UI
+- 🎨 Font Awesome icons for visual clarity
+
+## 📸 Demo
+
+https://user.github.io/todo-list-js/ *(if deployed via GitHub Pages)*
+
+## 🛠️ Tech Stack
+
+- **HTML5** – Semantic structure  
+- **CSS3** – Responsive and modern styling  
+- **JavaScript** – Core logic, DOM handling, dynamic updates
+
+
+
