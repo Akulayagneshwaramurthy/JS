@@ -104,7 +104,11 @@ Thanks to Amaravathi Software Innovations Pvt. Ltd. for the training opportunity
 
 A simple and stylish To-Do List app built with **HTML, CSS, and JavaScript**. This project is part of my front-end development practice to master JavaScript DOM manipulation and dynamic UI handling.
 
-![Preview](preview.gif) <!-- You can upload a short gif or screenshot here -->
+![Preview](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-07-08%20101301.png) <!-- You can upload a short gif or screenshot here -->
+
+![Preview](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-07-08%20101239.png)
+
+![Preview](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Screenshot%202025-07-08%20101439.png)
 
 ## 🚀 Features
 
