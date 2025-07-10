@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <title>Add to Cart</title>
+</head>
+<style>
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .navbar{
+    gap: 20px;
+    color: white;
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    i{
+      font-size: 20px;
+    }
+  }
+  .container{
+    display: flex;
+  }
+  #root{
+    gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 1150px;
+  }
+  .allcarts{
+    padding: 20px;
+    border-left: 3px solid black;
+    .carts{
+      font-size: 20px;
+      margin: 10px 0px;
+      display: flex;
+      width: 400px;
+      justify-content: space-between;
+    }
+    i, #count{
+      font-size: 15px;
+    }
+  }
+  .para{
+    padding: 10px;
+  }
+  .cartcard{
+    display: flex;
+    padding: 10px;
+    margin: 7px 0px;
+    text-align: center;
+    align-items: center;
+    border: 2px solid rgb(193, 189, 189);
+    border-radius: 5px;
+    justify-content: space-around;
+    i{
+      cursor: pointer;
+    }
+  }
+  .cartcard:hover{
+    box-shadow: 0px 2px 20px rgb(193, 189, 189);
+  }
+  footer{
+    display: flex;
+    margin: 10px 0px;
+    justify-content: space-between;
+  }
+  .card{
+    border: 2px solid rgb(193, 189, 189);
+    border-radius: 7px;
+    text-align: center;
+    padding: 20px;
+    button{
+      padding: 10px 20px;
+      color: white;
+      border: 0;
+      border-radius: 7px;
+      cursor: pointer;
+      background-color: rgb(101, 101, 231);
+    }
+    button:hover{
+      background-color: rgb(145, 145, 252);
+    }
+  }
+  .card:hover{
+    box-shadow: 0px 2px 20px rgb(193, 189, 189);
+  }
+  .fa-x:hover{
+      text-shadow: 0px 2px 20px rgb(172, 172, 172);
+    }
+</style>
+<body>
+  <div class="main">
+    <div class="navbar">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <h2>Add to Cart</h2>
+    </div>
+    <div class="container">
+      <div id="root"></div>
+      <div class="allcarts">
+        <div class="carts">
+        <h3>Carts</h3>
+        <div class="icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="count">0</span>
+        </div>
+      </div>
+      <hr>
+      <div id="para">Your Cart is Empty</div>
+      <hr>
+      <footer>
+        <h3>Total</h3>
+        <span id="Total">0.00</span>
+      </footer>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    let cart = [];
+    let alldata = [];
+
+    async function allproducts() {
+      const res = await fetch('https://fakestoreapi.com/products');
+      const data = await res.json();
+      alldata = data
+      displayproducts(data);
+    }
+
+    function addtoCart(index){
+      cart.push({...alldata[index]});
+      displayCart();
+    }
+
+    function displayproducts(data){
+      document.getElementById('root').innerHTML = data.map((item,index) => {
+        return`<div class="card">
+          <img src="${item.image}" width="100px" height="100px">
+          <br>
+          <h3>${item.category}</h3>
+          <p>Price : &#8377;${item.price}</p>
+          <br>
+          <button onclick="addtoCart(${index})">Add</button>
+        </div>`;
+      }).join('');
+    }
+     
+    function displayCart(){
+      let total = 0;
+      document.getElementById('count').innerHTML = cart.length;
+      if(cart.length === 0){
+        document.getElementById('para').innerHTML = "Your Cart is Empty";
+        document.getElementById('Total').innerHTML = "0.00";
+      }else{
+        const items = cart.map((item,li) => {
+          total += item.price;
+          return`<div class="cartcard">
+              <img src="${item.image}" width="40px" height="40px">
+              <div class="para">
+              <h4>${item.category}</h4>
+              <p>Price : &#8377;${item.price}</p>
+              </div>
+              <i class="fa-solid fa-x" onclick="removeCart(${li})" style="color: #000000;"></i>
+          </div>`;
+         }).join('');
+        document.getElementById('para').innerHTML = items;
+        document.getElementById('Total').innerText = total;
+      }
+    }
+ 
+    function removeCart(index){
+      cart.splice(index,1);
+      displayCart();
+    }
+
+    allproducts()
+  </script>
+</body>
+</html>
