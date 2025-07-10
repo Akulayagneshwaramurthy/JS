@@ -142,15 +142,15 @@ This is a simple and interactive **Add to Cart** web application built using **H
 
 ### 🧺 Initial View (Cart is Empty)
 
-![Empty Cart](/mnt/data/Screenshot%202025-07-10%20194450.png)
+![Empty Cart](https://github.com/Akulayagneshwaramurthy/JS/blob/main/image-1.png)
 
 ### ➕ After Adding Items
 
-![Items Added](/mnt/data/Screenshot%202025-07-10%20194505.png)
+![Items Added](https://github.com/Akulayagneshwaramurthy/JS/blob/main/image-2.png)
 
 ### ❌ Removing Items from Cart
 
-![Items Removed](/mnt/data/Screenshot%202025-07-10%20194523.png)
+![Items Removed](https://github.com/Akulayagneshwaramurthy/JS/blob/main/image-3.png)
 
 ---
 
