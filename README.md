@@ -130,3 +130,55 @@ https://user.github.io/todo-list-js/ *(if deployed via GitHub Pages)*
 
 
 
+Here's a well-written **README** description for your GitHub project based on the shared images and explanation:
+
+---
+
+# 🛒 Add to Cart - JavaScript Project
+
+This is a simple and interactive **Add to Cart** web application built using **HTML**, **CSS**, and **JavaScript**. The project dynamically fetches products and allows users to add them to a shopping cart with real-time updates to the item count and total price.
+
+## 📸 Project Preview
+
+### 🧺 Initial View (Cart is Empty)
+
+![Empty Cart](/mnt/data/Screenshot%202025-07-10%20194450.png)
+
+### ➕ After Adding Items
+
+![Items Added](/mnt/data/Screenshot%202025-07-10%20194505.png)
+
+### ❌ Removing Items from Cart
+
+![Items Removed](/mnt/data/Screenshot%202025-07-10%20194523.png)
+
+---
+
+## ✨ Features
+
+* 🎨 Clean and responsive UI
+* 🛍 Dynamic product listing with title, price, and image
+* ➕ **Add to Cart** functionality for each product
+* 🧾 Real-time **cart updates** including:
+
+  * Number of items in the cart
+  * Live total price calculation
+* ❌ Ability to remove individual items from the cart
+
+---
+
+## 🛠️ Tech Stack
+
+* **HTML** – Structure
+* **CSS** – Styling
+* **JavaScript** – Logic and dynamic behavior
+
+---
+
+## 🚀 How to Run
+
+1. Clone this repository or download the source code.
+2. Open `store-2.html` in your browser.
+3. Browse products and click on **"Add"** to see items added to the cart in real-time!
+
+
