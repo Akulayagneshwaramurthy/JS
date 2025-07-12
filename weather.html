@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <title>Weather App</title>
+</head>
+<style>
+    body{
+        background: linear-gradient(90deg, #014f43, #3d385e);
+        display: flex;
+        justify-content: space-between;
+    }
+    .container{
+        background: linear-gradient(135deg, #00feda, #5b548a);
+        box-shadow: 0px 7px 20px rgb(0, 0, 0);
+        border: 0;
+        border-radius: 10px;
+        width: 500px;
+        height: 550px;
+        margin: 100px 30px 0px 0px;
+        padding: 20px;
+        color: white;
+    }
+    .in{
+        margin: 10px 0px;
+        display: flex;
+        gap: 50px;
+        input{
+            width: 350px;
+            height: 40px;
+            padding: 10px 10px 10px 20px;
+            font-size: medium;
+            border: 0;
+            border-radius: 50px;
+            background-color: #f5f5f5;
+            margin-top: 5px;
+        }
+        input::placeholder{
+            color: #c3c2c2;
+            font-size: medium;
+        }
+        button{
+            background-color: #f5f5f5;
+            width: 50px;
+            height: 50px;
+            color: #c3c2c2;
+            border: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            padding: 5px;
+        }
+    }
+    .box{
+        margin: 10px 0px;
+        width: 460px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        img{
+            margin: 10px 0px;
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .box1{
+        display: flex;
+        justify-content: space-between;
+        margin: 150px 0px 40px 0px;
+        i{
+            font-size: 50px;
+        }
+        .water{
+            gap: 20px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .wind{
+            gap: 20px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .header{
+        margin: 200px 0px 0px 30px;
+        text-align: center;
+        h1{
+            font-size: 150px;
+            color: rgb(31, 228, 31);
+            text-shadow: 0px 7px 20px rgb(31, 228, 31);
+        }
+        span{
+            font-size: 150px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 7px 20px rgb(255, 255, 255);
+        }
+        h3{
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 7px 20px rgb(255, 255, 255);
+        }
+        lo{
+            font-size: 50px;
+            color: rgb(238, 0, 218);
+            text-shadow: 0px 7px 20px rgb(238, 0, 218);
+        }
+    }
+</style>
+<body>
+    <div class="header">
+        <h1>Weather <span>App</span></h1>
+        <h3>Using <lo>JavaScript</lo></h3>
+    </div>
+    <div class="container">
+        <div class="in">
+            <input type="text" id="Search" placeholder="Enter any Place">
+            <button id="btn"><i class="fa-solid fa-magnifying-glass" style="color: #c3c2c2;"></i></button>
+        </div>
+        <div class="box">
+            <img src="" alt="" id="image"/>
+            <h1 id="temp"></h1>
+            <h3 id="city"></h3>
+        </div>
+        <div class="box1">
+            <div class="water">
+                <i class="fa-solid fa-water" style="color: #ffffff;"></i>
+                <div class="perhum">
+                    <h3 id="per"></h3>
+                    <h5 id="hum">Humidity</h5>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind" style="color: #ffffff;"></i>
+                <div class="kmwind">
+                    <h3 id="km"></h3>
+                    <h5 id="wind">Wind Speed</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const apiKey="12a15334ee2ff243c9bf080ae0666f77"
+        const apiUrl="https://api.openweathermap.org/data/2.5/weather?&units=metric&q="
+    
+       async function box(city) {
+        const res = await fetch(apiUrl+city+`&appid=${apiKey}`);
+        const para = await res.json();
+
+        document.getElementById('temp').innerHTML = para.main.temp+`<sup>o</sup>C`;
+        document.getElementById('city').innerHTML = para.name;
+        document.getElementById('per').innerHTML = para.main.humidity+`%`;
+        document.getElementById('km').innerHTML = para.wind.speed+` Km/Hr`;
+
+        if(para.weather[0].main === 'Clouds'){
+        document.getElementById('image').src = "https://static.vecteezy.com/system/resources/previews/047/592/066/large_2x/white-cloud-cartoon-free-png.png";
+        } else if(para.weather[0].main === 'Rain'){
+        document.getElementById('image').src = "https://static.vecteezy.com/system/resources/previews/012/806/409/original/3d-cartoon-weather-rain-sign-of-dark-clouds-with-raindrops-isolated-on-transparent-background-3d-render-illustration-png.png";
+        } else if(para.weather[0].main === 'Thunderstorm'){
+        document.getElementById('image').src = "https://webstockreview.net/images/clipart-clouds-gambar-19.png";
+        } else if(para.weather[0].main === 'Clear'){
+        document.getElementById('image').src = "https://th.bing.com/th/id/R.e1744d31f0b704bee5c8025e26c95731?rik=dwpo3CYpSvRzmg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2016%2f07%2fSun-Free-PNG-Image.png&ehk=tBDILnI%2fxQQuqe4i2jphKffLeiezjBDzTy38LlkJy08%3d&risl=&pid=ImgRaw&r=0";
+        } else if(para.weather[0].main === 'Drizzle'){
+        document.getElementById('image').src = "https://cdn3d.iconscout.com/3d/premium/thumb/drizzle-3d-icon-download-in-png-blend-fbx-gltf-file-formats--rainy-day-rain-weather-cloud-forecast-season-pack-nature-icons-8599072.png";
+        } else if(para.weather[0].main === 'Snow'){
+        document.getElementById('image').src = "https://cdn-icons-png.flaticon.com/512/9077/9077078.png";
+        } else if(para.weather[0].main === 'Mist'){
+        document.getElementById('image').src = "https://cdn-icons-png.flaticon.com/512/9077/9077078.png";
+        } else if(para.weather[0].main === 'Sand'){
+        document.getElementById('image').src = "https://cdn-icons-png.flaticon.com/512/6183/6183426.png";
+        } else if(para.weather[0].main === 'Ash'){
+        document.getElementById('image').src = "https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/1f30b.png";
+        } else if(para.weather[0].main === 'Squall'){
+        document.getElementById('image').src = "https://www.emojiall.com/en/svg-to-png/openmoji/640/1F32C.png";
+        } else if(para.weather[0].main === 'Tornado'){
+        document.getElementById('image').src = "https://th.bing.com/th/id/R.9fc0e9dff167f51813d8d0bc3b005d4f?rik=QKkWbzN%2ba7Ux%2bg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2017%2f03%2fTornado-PNG-Clipart.png&ehk=B7mlIlIuHoyx0bsTKPVQZWM5%2b50t9h1suNmgetAe0JY%3d&risl=&pid=ImgRaw&r=0";
+        }
+
+       }
+
+        async function weather(e) {
+        const res = await fetch(apiUrl+e+`&appid=${apiKey}`);
+        const data = await res.json();   
+        
+        document.getElementById('temp').innerHTML = data.main.temp+`<sup>o</sup>C`;
+        document.getElementById('city').innerHTML = data.name;
+        document.getElementById('per').innerHTML = data.main.humidity+`%`;
+        document.getElementById('km').innerHTML = data.wind.speed+` Km/Hr`;
+
+
+        if(data.weather[0].main === 'Clouds'){
+        document.getElementById('image').src = "https://static.vecteezy.com/system/resources/previews/047/592/066/large_2x/white-cloud-cartoon-free-png.png";
+        } else if(data.weather[0].main === 'Rain'){
+        document.getElementById('image').src = "https://static.vecteezy.com/system/resources/previews/012/806/409/original/3d-cartoon-weather-rain-sign-of-dark-clouds-with-raindrops-isolated-on-transparent-background-3d-render-illustration-png.png";
+        } else if(data.weather[0].main === 'Thunderstorm'){
+        document.getElementById('image').src = "https://webstockreview.net/images/clipart-clouds-gambar-19.png";
+        } else if(data.weather[0].main === 'Clear'){
+        document.getElementById('image').src = "https://th.bing.com/th/id/R.e1744d31f0b704bee5c8025e26c95731?rik=dwpo3CYpSvRzmg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2016%2f07%2fSun-Free-PNG-Image.png&ehk=tBDILnI%2fxQQuqe4i2jphKffLeiezjBDzTy38LlkJy08%3d&risl=&pid=ImgRaw&r=0";
+        } else if(data.weather[0].main === 'Drizzle'){
+        document.getElementById('image').src = "https://cdn3d.iconscout.com/3d/premium/thumb/drizzle-3d-icon-download-in-png-blend-fbx-gltf-file-formats--rainy-day-rain-weather-cloud-forecast-season-pack-nature-icons-8599072.png";
+        } else if(data.weather[0].main === 'Snow'){
+        document.getElementById('image').src = "https://cdn-icons-png.flaticon.com/512/9077/9077078.png";
+        } else if(data.weather[0].main === 'Mist'){
+        document.getElementById('image').src = "https://cdn-icons-png.flaticon.com/512/9077/9077078.png";
+        } else if(data.weather[0].main === 'Sand'){
+        document.getElementById('image').src = "https://cdn-icons-png.flaticon.com/512/6183/6183426.png";
+        } else if(data.weather[0].main === 'Ash'){
+        document.getElementById('image').src = "https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/1f30b.png";
+        } else if(data.weather[0].main === 'Squall'){
+        document.getElementById('image').src = "https://www.emojiall.com/en/svg-to-png/openmoji/640/1F32C.png";
+        } else if(data.weather[0].main === 'Tornado'){
+        document.getElementById('image').src = "https://th.bing.com/th/id/R.9fc0e9dff167f51813d8d0bc3b005d4f?rik=QKkWbzN%2ba7Ux%2bg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2017%2f03%2fTornado-PNG-Clipart.png&ehk=B7mlIlIuHoyx0bsTKPVQZWM5%2b50t9h1suNmgetAe0JY%3d&risl=&pid=ImgRaw&r=0";
+        }
+
+        }
+   
+        box('Rajahmundry');
+
+        btn.addEventListener('click',()=>{
+            weather(Search.value)
+        })
+    </script>
+</body>
+</html>
