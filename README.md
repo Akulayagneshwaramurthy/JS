@@ -236,3 +236,29 @@ https://api.openweathermap.org/data/2.5/weather?units=metric&q={city}&appid={API
 It displays the temperature, humidity, wind speed, and a weather image accordingly.
 
 The app stores recent search history for quick access in the future.
+
+
+## Calculator Web App
+
+A simple, responsive calculator web application built with vanilla HTML, CSS, and JavaScript. This project demonstrates clean UI design and basic calculator functionality using only front-end technologies.
+
+## 🖥️ Demo
+
+The calculator features a clean, modern interface with a dark theme and intuitive button layout. It performs basic arithmetic operations including addition, subtraction, multiplication, and division.
+
+## ✨ Features
+
+Basic Arithmetic Operations: Addition (+), Subtraction (-), Multiplication (*), Division (/)
+Clear Functions: AC (All Clear) and Del (Delete last digit)
+Percentage Calculations: Built-in percentage function
+Responsive Design: Works on desktop and mobile devices
+Clean UI: Modern dark theme with hover effects
+Real-time Display: Shows calculations as you type
+
+## 🛠️ Technologies Used
+
+HTML5: Structure and layout
+CSS3: Styling and responsive design
+JavaScript: Calculator logic and functionality
+No external dependencies: Pure vanilla JavaScript implementation
+
