@@ -216,6 +216,12 @@ OpenWeatherMap API
 
 📸 Preview
 
+![Items Added](https://github.com/Akulayagneshwaramurthy/JS/blob/main/weather-1.png)
+
+![Items Added](https://github.com/Akulayagneshwaramurthy/JS/blob/main/weather-2.png)
+
+![Items Added](https://github.com/Akulayagneshwaramurthy/JS/blob/main/weather-3.png)
+
 📦 How It Works
 The app loads with default city Rajahmundry's weather.
 
