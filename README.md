@@ -182,3 +182,49 @@ This is a simple and interactive **Add to Cart** web application built using **H
 3. Browse products and click on **"Add"** to see items added to the cart in real-time!
 
 
+🌦️ Weather App Using JavaScript
+This is a simple and interactive Weather App built using HTML, CSS, and JavaScript. The app fetches real-time weather data from the OpenWeatherMap API and displays it in a clean and modern UI.
+
+
+🔧 Features
+🌍 Default weather shows for Rajahmundry on load.
+
+🔎 Search for any city to get real-time:
+
+Temperature (°C)
+
+Humidity (%)
+
+Wind Speed (Km/Hr)
+
+Weather condition icon
+
+🧠 Remembers previously searched cities using autocomplete.
+
+🌈 Stylish and responsive design with gradient backgrounds and animated icons.
+
+
+
+💡 Technologies Used
+HTML5
+
+CSS3
+
+JavaScript (ES6+)
+
+OpenWeatherMap API
+
+📸 Preview
+
+📦 How It Works
+The app loads with default city Rajahmundry's weather.
+
+When a user enters another city in the search bar, it fetches weather data via:
+
+bash
+Copy
+Edit
+https://api.openweathermap.org/data/2.5/weather?units=metric&q={city}&appid={API_KEY}
+It displays the temperature, humidity, wind speed, and a weather image accordingly.
+
+The app stores recent search history for quick access in the future.
