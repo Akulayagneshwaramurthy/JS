@@ -262,3 +262,10 @@ CSS3: Styling and responsive design
 JavaScript: Calculator logic and functionality
 No external dependencies: Pure vanilla JavaScript implementation
 
+## 📸 Project Preview
+
+![](https://github.com/Akulayagneshwaramurthy/JS/blob/main/calculator-1.png)
+
+![](https://github.com/Akulayagneshwaramurthy/JS/blob/main/calculator-2.png)
+
+![](https://github.com/Akulayagneshwaramurthy/JS/blob/main/calculator-3.png)
