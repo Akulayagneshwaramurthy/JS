@@ -269,3 +269,40 @@ No external dependencies: Pure vanilla JavaScript implementation
 ![](https://github.com/Akulayagneshwaramurthy/JS/blob/main/calculator-2.png)
 
 ![](https://github.com/Akulayagneshwaramurthy/JS/blob/main/calculator-3.png)
+
+
+## 🚗 Car Inventory Management System (CRUD Application)
+
+This is a simple and interactive Car Inventory CRUD Application developed using HTML, CSS, and JavaScript. It helps manage a list of cars, including their quantity, price, brand, and image. Users can Create, Read, Update, and Delete car records dynamically in a responsive table format.
+
+## 🔍 Features
+
+🔎 Search Functionality: Instantly filter cars by brand name using the search bar.
+
+➕ Add New Car: Click the "Add New Car" button to display a popup form and add a new car to the inventory.
+
+✏️ Edit Car Details: Click the "Edit" button next to any car to update its brand, image, price, or quantity.
+
+❌ Delete Car: Remove a car entry from the inventory by clicking the "Delete" button.
+
+➖➕ Quantity Update: Increase or decrease the car quantity using minus (-) and plus (+) buttons.
+
+💰 Dynamic Pricing: Price is calculated based on the formula price * quantity.
+
+📊 Total Price Calculation: The footer of the table shows the total price of all listed cars.
+
+## 📷 Screenshots
+
+🔧 Full Inventory View
+
+🔎 Search Filter by Brand
+
+➕ Add Car Modal
+
+## 🛠 Technologies Used
+
+HTML – Markup for structure
+
+CSS – Styling and layout
+
+JavaScript – Interactivity and logic
