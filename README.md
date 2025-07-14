@@ -293,11 +293,11 @@ This is a simple and interactive Car Inventory CRUD Application developed using 
 
 ## 📷 Screenshots
 
-🔧 Full Inventory View
+![🔧 Full Inventory View](https://github.com/Akulayagneshwaramurthy/JS/blob/main/CRUD-1.png)
 
-🔎 Search Filter by Brand
+![🔎 Search Filter by Brand](https://github.com/Akulayagneshwaramurthy/JS/blob/main/CRUD-2.png)
 
-➕ Add Car Modal
+![➕ Add Car Modal](https://github.com/Akulayagneshwaramurthy/JS/blob/main/CRUD-3.png)
 
 ## 🛠 Technologies Used
 
