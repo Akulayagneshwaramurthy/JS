@@ -351,3 +351,43 @@ HTML
 CSS
 
 JavaScript
+
+
+## 🛍️ Online Shopping Web Page – API Integration
+
+This project is a dynamic online shopping web page built using HTML, CSS, and JavaScript, which fetches product data using API calls. It displays categorized product sections for Men, Women, and Kids, showcasing product images, names, prices, and purchase buttons.
+
+## 📸 Preview
+
+![Start Exam](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Online%20Exam-1.png)
+
+![Start Exam](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Online%20Exam-1.png)
+
+## 🚀 Features
+📦 Live API Integration: Fetches product data from an external API.
+
+👨‍🦱 Men Collection: Dynamically renders men’s wear.
+
+👩‍🦱 Women Collection: Displays fashionable women’s clothing.
+
+👶 Kids Collection: Includes a variety of children’s outfits.
+
+💳 Buy Now Button: Present on each product card (action can be customized).
+
+🎨 Clean UI: Organized into rows by category.
+
+## 🔗 API Source
+
+Products are retrieved from:
+https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json
+Each category is parsed and rendered under its respective section.
+
+## 🛠️ Tech Stack
+
+HTML
+
+CSS
+
+JavaScript (ES6)
+
+Fetch API
