@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Calls</title>
+  </head>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      padding: 20px;
+    }
+    .head {
+      text-align: center;
+      justify-content: center;
+      color: black;
+    }
+    .row {
+      margin: 30px 0px;
+      text-align: center;
+    }
+    #men {
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      gap: 30px;
+    }
+    #women {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    #kid {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .card {
+      border: 2px solid rgb(228, 228, 228);
+      width: 250px;
+      height: 420px;
+      border-radius: 10px;
+      padding: 0px;
+      text-align: center;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+    .card:hover{
+      transform: scale(1.1);
+    }
+    .btn{
+      background-color: blue;
+      border: 0;
+      border-radius: 7px;
+      cursor: pointer;
+      color: white;
+      font-size: medium;
+      padding: 10px 20px;
+    }
+    .btn:hover{
+      background-color: rgb(60, 60, 255);
+      color: white;
+      font-size: medium;
+      padding: 10px 20px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="head">
+        <h1>Online Shopping</h1>
+      </div>
+      <div class="row">
+        <h2>Men Collection</h2>
+        <div id="men"></div>
+         <h2>Women Collection</h2>
+        <div id="women"></div>
+         <h2>Kid Collection</h2>
+        <div id="kid"></div>
+      </div>
+    </div>
+    <script>
+      async function product() {
+        const res = await fetch(
+          "https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json"
+        );
+        const product = await res.json();
+        return product.categories;
+      }
+
+      async function menproduct() {
+        const men = document.getElementById("men");
+        const productCategories = await product();
+        const name = productCategories.find(
+          (cat) => cat.category_name === "Men"
+        );
+        const menproduct = name.category_products
+          .map((categories) => {
+            return `
+               <div class="card">
+                <img src="${categories.image}" alt="" width="250px" height="250px">
+                <h3>${categories.title}</h3>
+                <p>&#8377;${categories.price}</p>
+                <button class="btn">Buy now</button>
+                </div>
+              `;
+          })
+          .join("");
+        men.innerHTML = menproduct;
+      }
+
+      async function womenproduct() {
+        const women = document.getElementById("women");
+        const productCategories = await product();
+        const name = productCategories.find(
+          (cat) => cat.category_name === "Women"
+        );
+        const womenproduct = name.category_products
+          .map((categories) => {
+            return `
+               <div class="card">
+                <img src="${categories.image}" alt="" width="250px" height="250px">
+                <h3>${categories.title}</h3>
+                <p>&#8377;${categories.price}</p>
+                <button class="btn">Buy now</button>
+                </div>
+              `;
+          })
+          .join("");
+        women.innerHTML = womenproduct;
+      } 
+
+      async function kidproduct() {
+        const kid = document.getElementById("kid");
+        const productCategories = await product();
+        const name = productCategories.find(
+          (cat) => cat.category_name === "Kids"
+        );
+        const kidproduct = name.category_products
+          .map((categories) => {
+            return `
+               <div class="card">
+                <img src="${categories.image}" alt="" width="250px" height="250px">
+                <h3>${categories.title}</h3>
+                <p>&#8377;${categories.price}</p>
+                <button class="btn">Buy now</button>
+                </div>
+              `;
+          })
+          .join("");
+        kid.innerHTML = kidproduct;
+      }
+
+      menproduct();
+      womenproduct();
+      kidproduct();
+    </script>
+  </body>
+</html>
