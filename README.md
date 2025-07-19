@@ -306,3 +306,44 @@ HTML – Markup for structure
 CSS – Styling and layout
 
 JavaScript – Interactivity and logic
+
+
+## 📝 Online Exam Web Page
+
+This is a simple web-based Online Exam application built using HTML, CSS, and JavaScript. It allows users to take a short exam with a timer, score tracking, and reset functionality.
+
+## 📸 Preview
+
+Start Exam	Exam Interface	Score View
+
+## 🚀 Features
+
+✅ Start Exam Button: Launches the exam popup.
+
+⏱️ Countdown Timer: 60 seconds to complete the quiz.
+
+❓ Questions and Options: Multiple choice questions with checkboxes.
+
+🧠 Score Calculation: Displays score out of 3 after clicking the Submit button.
+
+🔁 Reset Button: Clears all selected options and restarts the exam interface.
+
+## 💡 How It Works
+
+Click Start Exam to open the exam popup.
+
+A 60-second timer starts counting down immediately.
+
+Each question has multiple options. Select your answer(s).
+
+Click Submit to evaluate the answers and show your score.
+
+Click Reset to clear answers and restart the exam interface.
+
+## 🛠️ Tech Stack
+
+HTML
+
+CSS
+
+JavaScript
