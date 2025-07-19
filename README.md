@@ -314,7 +314,11 @@ This is a simple web-based Online Exam application built using HTML, CSS, and Ja
 
 ## 📸 Preview
 
-Start Exam	Exam Interface	Score View
+![Start Exam](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Online%20Exam-1.png)
+
+![Exam Interface](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Online%20Exam-2.png)	
+
+![Score View](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Online%20Exam-3.png)
 
 ## 🚀 Features
 
