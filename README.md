@@ -359,11 +359,12 @@ This project is a dynamic online shopping web page built using HTML, CSS, and Ja
 
 ## 📸 Preview
 
-![Start Exam](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Online%20Exam-1.png)
+![Start Exam](https://github.com/Akulayagneshwaramurthy/JS/blob/main/API%20Calls-1.png)
 
-![Start Exam](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Online%20Exam-1.png)
+![Start Exam](https://github.com/Akulayagneshwaramurthy/JS/blob/main/API%20Calls-2.png)
 
 ## 🚀 Features
+
 📦 Live API Integration: Fetches product data from an external API.
 
 👨‍🦱 Men Collection: Dynamically renders men’s wear.
