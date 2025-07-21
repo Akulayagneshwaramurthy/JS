@@ -391,4 +391,59 @@ CSS
 
 JavaScript (ES6)
 
-Fetch API
+Fetch API  
+
+## 🧑‍🎓 Student Attendance System
+
+A simple and interactive web-based attendance management system built using HTML, CSS, and JavaScript. This project allows users to add student names, mark attendance, edit/delete records, and view attendance statistics in real time.
+
+## 📸 Screenshots
+
+ ![Initial Page](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Student%20Attence%20System-1.png)
+
+![Initial Page](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Student%20Attence%20System-2.png)
+
+## 🚀 Features
+
+✅ Add student by name
+✅ Mark individual students as Present or Absent
+✅ Filter view:
+
+🔆 All Presents
+
+🌑 All Absents
+
+📋 Show All
+✅ Edit or delete student records
+✅ View real-time attendance summary:
+
+Total Students
+
+All Presents
+
+All Absents
+✅ 🔴 Clear all student data
+
+## 🛠 Technologies Used
+
+HTML – Structure and layout
+
+CSS – Styling and responsive design
+
+JavaScript – Functional logic and interactivity
+
+LocalStorage – Persistent data storage
+
+## 💡 How It Works
+
+Enter a student's name and click Add.
+
+The student is added to the table with Present and Absent attendance options.
+
+Use the filter buttons to view Present, Absent, or All students.
+
+Edit a student's name or remove them using the respective buttons.
+
+The summary updates dynamically based on attendance selection.
+
+Use Clear All to reset the system.
