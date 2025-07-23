@@ -447,3 +447,64 @@ Edit a student's name or remove them using the respective buttons.
 The summary updates dynamically based on attendance selection.
 
 Use Clear All to reset the system.
+
+
+## 🍽️ Restaurant Menu System
+
+This is a dynamic Restaurant Menu System Web Page built using HTML, CSS, and JavaScript, designed to deliver a simple and interactive digital food ordering experience.
+
+## 🔍 Features
+
+Search Functionality
+Easily search your favorite food item using the input search bar.
+
+Food Categories
+Filter items based on categories:
+
+🥗 Starters food
+
+🍛 Main course
+
+🍰 Desserts foods
+
+Interactive Food Cards
+Each food item is displayed in a card with:
+
+Image
+
+Name
+
+Price
+
+Clickable to add to order
+
+Order Summary Section
+Displays the selected food items along with:
+
+Quantity selector (➕ Increase / ➖ Decrease)
+
+Item price calculation
+
+❌ Delete option for each item
+
+🧾 Grand total of all selected items
+
+Buttons
+
+🔴 Clear all order: Reset the entire cart
+
+🔵 Print bill: Print the current order summary
+
+## 📸 Screenshots
+
+ ![Food Menu Interface](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Resturent%20Menu%20System-1.png)
+
+![Food Menu Interface](https://github.com/Akulayagneshwaramurthy/JS/blob/main/Resturent%20Menu%20System-2.png)
+
+## 🛠️ Technologies Used
+
+HTML5 – Structure
+
+CSS3 – Styling with shadows, alignment, and responsive cards
+
+JavaScript – DOM manipulation, localStorage, event handling
