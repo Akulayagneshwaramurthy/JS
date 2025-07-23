@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Resturent Menu System</title>
+  </head>
+  <style>
+    body {
+      align-items: center;
+      text-align: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1 {
+      color: rgb(0, 0, 0);
+    }
+    .search {
+      margin: 30px 0px;
+      text-align: left;
+      /* background-color: orangered; */
+      i {
+        margin-left: 1007px;
+        cursor: pointer;
+        margin-top: 1px;
+        position: relative;
+        border: 0;
+        border-left: 2px solid rgb(0, 0, 0);
+        border-radius: 0px 7px 7px 0px;
+        background-color: rgb(155, 152, 152);
+        color: ghostwhite;
+        padding: 12px;
+      }
+      input {
+        font-size: large;
+        position: absolute;
+        color: rgb(0, 0, 0);
+        border: 2px solid rgb(0, 0, 0);
+        background-color: transparent;
+        border-radius: 7px;
+        width: 650px;
+        padding: 10px 20px;
+        margin-left: 400px;
+      }
+      input::placeholder {
+        color: rgb(202, 199, 199);
+      }
+    }
+    .seaction1 {
+      margin: 50px 0px;
+      #menu {
+        margin-left: 300px;
+        margin-bottom: 30px;
+        display: flex;
+        gap: 100px;
+      }
+      button {
+        cursor: pointer;
+        padding: 15px 50px;
+        border: 0;
+        border-radius: 10px;
+        font-size: large;
+        color: rgb(0, 0, 0);
+        background-color: rgb(228, 228, 228);
+        box-shadow: 0px 7px 15px black;
+      }
+      button:hover {
+        cursor: pointer;
+        padding: 15px 50px;
+        border: 0;
+        border-radius: 10px;
+        font-size: large;
+        background-color: rgb(189, 189, 189);
+        box-shadow: 0;
+      }
+    }
+    .line {
+      background-color:rgb(97, 97, 97);
+      width: 1490px;
+      height: 2px;
+    }
+    .startersfoods {
+      padding: 30px 0px;
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      gap: 50px;
+      justify-content: center;
+      .box {
+        cursor: pointer;
+        border-radius: 12px;
+        width: 200px;
+        height: 250px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0px 7px 15px black;
+        transition: all 0.3s;
+      }
+      .box:hover {
+        box-shadow: 0px 7px 25px black;
+        transform: scale(0.9);
+      }
+      .para {
+        margin-top: 130.5px;
+        color: transparent;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 0px 0px 10px 10px;
+      }
+      .para:hover {
+        margin-top: 130.5px;
+        color: white;
+        background-color: rgb(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 0px 0px 10px 10px;
+      }
+    }
+    .row{
+      border: 2px solid rgb(204, 202, 202);
+      border-radius: 7px;
+      padding: 10px;
+      font-size: large;
+      width: 1400px;
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0px;
+    }
+    .td{
+        gap: 10px;
+        display: flex;
+        justify-content: space-between;
+        button{
+          padding: 5px 10px;
+          border: 2px solid rgb(185, 184, 184);
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: medium;
+          color: black;
+        }
+        button:hover{
+          background-color: rgb(155, 154, 154);
+        }
+      }
+      .head{
+        border-top: 2px solid black;
+        padding: 20px;
+        font-size: 25px;
+      }
+      .bth{
+        padding: 5px 0px;
+        padding-left: 600px;
+        display: flex;
+        gap: 100px;
+        button{
+          padding: 10px 20px;
+          cursor: pointer;
+          font-size: large;
+          border: 0;
+          border-radius: 10px;
+        }
+        .cle{
+          background-color: red;
+          color: white;
+        }
+        .cle:hover{
+          background-color: rgb(248, 65, 65);
+          color: white;
+        }
+        .print{
+          background-color: blue;
+          color: white;
+        }
+        .print:hover{
+          background-color: rgb(59, 59, 250);
+          color: white;
+        }
+      }
+  </style>
+  <body>
+    <h1>Resturent Menu System</h1>
+    <div class="search">
+      <input
+        type="search"
+        id="Search"
+        placeholder="Search your favourite food...."
+      />
+      <i class="fa-solid fa-magnifying-glass" style="color: ghostwhite"></i>
+    </div>
+    <div class="seaction1">
+      <div id="menu">
+        <button onclick="starters()">Starters food</button>
+        <button onclick="main()">Main course</button>
+        <button onclick="desserts()">Desserts foods</button>
+      </div>
+      <div class="line"></div>
+      <div class="startersfoods" id="startersfoods">
+        <div class="box">
+          <div class="para">
+            <h3>Spring Rolls</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Garlic Bread</h3>
+            <p>&#8377; 100</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Paneer Tikka</h3>
+            <p>&#8377; 250</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Chicken Wings</h3>
+            <p>&#8377; 500</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Vegetable Samosa</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Hara Bhara Kabab</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Cheese Balls</h3>
+            <p>&#8377; 100</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Chilli Paneer</h3>
+            <p>&#8377; 150</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Fish Fingers</h3>
+            <p>&#8377; 70</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Stuffed Mushrooms</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+      </div>
+      <div class="startersfoods" id="mainfoods">
+        <div class="box">
+          <div class="para">
+            <h3>Butter Chicken</h3>
+            <p>&#8377; 150</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Biryani</h3>
+            <p>&#8377; 100</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Paneer Butter Masala</h3>
+            <p>&#8377; 250</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Rogan Josh</h3>
+            <p>&#8377; 500</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Dal Makhani</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Pizza</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Pasta Alfredo</h3>
+            <p>&#8377; 100</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Palak Paneer</h3>
+            <p>&#8377; 150</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Chicken Curry</h3>
+            <p>&#8377; 70</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Thali</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+      </div>
+      <div class="startersfoods" id="dessertssfoods">
+        <div class="box">
+          <div class="para">
+            <h3>Gulab Jamun</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Rasmalai</h3>
+            <p>&#8377; 100</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Ice Cream</h3>
+            <p>&#8377; 250</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Brownie with Cream</h3>
+            <p>&#8377; 500</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Gajar Ka Halwa</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Cheesecake</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Tiramisu</h3>
+            <p>&#8377; 100</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Fruit Custard</h3>
+            <p>&#8377; 150</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Kaju Katli</h3>
+            <p>&#8377; 70</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="para">
+            <h3>Chocolate Mousse</h3>
+            <p>&#8377; 50</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <h2>Order Summary</h2>
+    <table>
+      <tbody id="foods"></tbody>
+    </table>
+    <h3 class="head">Total : <span id="total"></span></h3>
+     <div class="bth">
+      <button class="cle" onclick="cle()">Clear all order</button>
+       <button class="print" onclick="bill()">Print bill</button>
+    </div>
+    <script>
+      const imagesurl = [
+        "https://khinskitchen.com/wp-content/uploads/2021/02/DSC03140.jpg",
+        "https://i.pinimg.com/originals/af/dc/06/afdc06b563b6a073485f558349f65c82.jpg",
+        "https://ministryofcurry.com/wp-content/uploads/2021/01/Paneer-Tikka_-2-1.jpg",
+        "https://thekitchengirl.com/wp-content/uploads/baked-chicken-wings-A_08-2-1024x1536.jpg",
+        "https://i0.wp.com/fatimacooks.net/wp-content/uploads/2020/02/Jalapeno-Three-Cheese-Samosa-2.jpg?resize=780%2C1170",
+        "https://i0.wp.com/www.cookingfromheart.com/wp-content/uploads/2017/06/Hara-Bhara-Kabab-4.jpg?resize=683%2C1024",
+        "https://th.bing.com/th/id/OIP.0RbpwtoFXx6p215OTe7j9AHaLH?w=204&h=306&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+        "https://i0.wp.com/myspicetrunk.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-12-at-11.48.24-AM.jpeg?w=835&ssl=1",
+        "https://tse1.explicit.bing.net/th/id/OIP.ZlZ2OZxNo8lo42CWPfJC_gHaLG?w=1707&h=2560&rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://peasandcrayons.com/wp-content/uploads/2017/02/easy-appetizer-goat-cheese-stuffed-mushrooms-recipe-peasandcrayons-4661.jpg",
+        "https://th.bing.com/th/id/OIP.82Prv6C9GX2IEaku46uPcAHaLG?w=204&h=306&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+        "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/chicken-biryani.jpg",
+        "https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/paneer-butter-masala-4.jpg",
+        "https://tse3.mm.bing.net/th/id/OIP.aIQVFrhFx51N6QCUIeuT4QAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://tse2.mm.bing.net/th/id/OIP.cO1N7ff2Vp2wt98Yx39JcwHaLG?rs=1&pid=ImgDetMain&o=7&rm=3",
+        "https://nutriciously.com/wp-content/uploads/Vegan-Mediterranean-Pizza-11-735x1104.jpg",
+        "https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco/https://storage.googleapis.com/gen-atmedia/3/2017/10/c54907276a7cb6e0545ae2128bdc984e86b6cb9d.jpeg",
+        "https://littlespicejar.com/wp-content/uploads/2021/01/Best-Garlicky-Palak-Paneer-13-710x1065.jpg",
+        "https://feastwithsafiya.com/wp-content/uploads/2022/03/chicken-curry-recipe.jpg",
+        "https://cookwithrenu.com/wp-content/uploads/2020/09/Rajasthani-Thali_2.jpg.webp",
+        "https://media.chefdehome.com/740/0/0/gulab-jamun/indian-gulab-jamun-chefdehome-1.jpg",
+        "https://spicesnflavors.com/wp-content/uploads/2018/05/rasmalai-3-min.jpg",
+        "https://princesspinkygirl.com/wp-content/uploads/2020/07/Vanilla-Ice-Cream-in-a-cup-640x960.jpg",
+        "https://www.cookingclassy.com/wp-content/uploads/2020/04/small-batch-brownies-39.jpg",
+        "https://thetastesofindia.com/wp-content/uploads/2019/01/GajarkaHalwa-Foodgawker3-min-1.jpg",
+        "https://tornadoughalli.com/wp-content/uploads/2018/09/NEW-YORK-STYLE-CHEESECAKE2-2.jpg",
+        "https://thebananadiaries.com/wp-content/uploads/2021/12/vegan-tiramisu-recipe_4581-700x1050.jpg",
+        "https://vismaifood.com/storage/app/uploads/public/68a/a41/095/thumb__700_0_0_0_auto.jpg",
+        "https://holycowvegan.net/wp-content/uploads/2013/11/vegan-kaju-katli-8-1.jpg",
+        "https://2.bp.blogspot.com/-xXxcKHprEHw/Wl-zTrtbk-I/AAAAAAAAMzM/qTcwTrONi8ImsD6c8n0BMweQ0ToiAM0swCLcBGAs/s1600/chocolate-mousse%2B-%2B2.png",
+      ];
+
+      const input = document.getElementById("Search");
+      const boxes = document.querySelectorAll(".box");
+
+      input.addEventListener("input", () => {
+        const searchvalue = input.value.toLowerCase().trim();
+        const seactions = [
+          ...document.querySelectorAll(".startersfoods")
+        ];
+
+        const vssection = seactions.find(seaction => seaction.style.display !== "none")
+
+          if (vssection) {
+            const boxes = vssection.querySelectorAll(".box");
+
+            boxes.forEach((box) => {
+              const boxtext = box
+                .querySelector(".para h3")
+                .textContent.toLowerCase()
+                .trim();
+              if (searchvalue === '' || boxtext.includes(searchvalue)) {
+                box.style.display = "inline-block";
+              } else {
+                box.style.display = "none";
+              }
+            });
+          }
+      });
+
+      boxes.forEach((box, index) => {
+        box.style.backgroundImage = `url('${imagesurl[index]}')`;
+      });
+
+      document.getElementById("startersfoods").style.display = "";
+      document.getElementById("mainfoods").style.display = "none";
+      document.getElementById("dessertssfoods").style.display = "none";
+
+      function starters() {
+        document.getElementById("startersfoods").style.display = "";
+        document.getElementById("mainfoods").style.display = "none";
+        document.getElementById("dessertssfoods").style.display = "none";
+      }
+
+      function main() {
+        document.getElementById("startersfoods").style.display = "none";
+        document.getElementById("mainfoods").style.display = "";
+        document.getElementById("dessertssfoods").style.display = "none";
+      }
+
+      function desserts() {
+        document.getElementById("startersfoods").style.display = "none";
+        document.getElementById("mainfoods").style.display = "none";
+        document.getElementById("dessertssfoods").style.display = "";
+      }
+
+      const tbody = document.getElementById('foods');
+
+      boxes.forEach((box) => {
+        box.addEventListener('click', () => {
+          const name = box.querySelector('.para h3')?.textContent.trim();
+          const priceText = box.querySelector('.para p')?.textContent.trim();
+          const price = parseFloat(priceText.replace(/[^\d.]/g, ''));
+          let qty = 1;
+          
+          if (name && price){
+          const row = document.createElement('tr');
+          row.classList.add('row');
+          row.innerHTML=`
+          <td>${name}</td>
+          <td class="td"><button class="incr">+</button> <span class="qtyr">${qty}</span> <button class="decr">-</button></td>
+          <td class="prices">&#8377;${(qty * price)}</td>
+          <td><i class="fa-solid fa-trash delete-btn" style="color: #ff0000;cursor: pointer;" onclick='delete()'></i></td>
+          `;
+
+          const qtyrn = row.querySelector('.qtyr');
+          const prices = row.querySelector('.prices');
+
+          row.querySelector('.incr').addEventListener('click', () => {
+            qty++;
+            qtyrn.textContent = qty;
+            prices.innerHTML = `&#8377;${(qty * price)}`;
+            updatetotal();
+          });
+
+          row.querySelector('.decr').addEventListener('click', () => {
+           if(qty > 1){
+            qty--;
+            qtyrn.textContent = qty;
+            prices.innerHTML = `&#8377;${(qty * price)}`;
+            updatetotal();
+           };
+          });
+
+          row.querySelector('.delete-btn').addEventListener('click', () => {
+            row.remove();
+            updatetotal();
+          });
+          tbody.appendChild(row);
+          updatetotal();
+          }
+        });
+      });
+      
+      const totaldisplay = document.getElementById('total');
+
+      function updatetotal(){
+        let total = 0;
+        document.querySelectorAll('.row').forEach((row) => {
+          const pricetext = row.querySelector('.prices').textContent.replace(/[^\d.]/g, '');
+          total += parseFloat(pricetext);
+        });
+        totaldisplay.innerHTML = `&#8377;${total}`;
+      };
+
+      function cle(){
+        tbody.innerHTML = "";
+        updatetotal();
+      }
+    
+    </script>
+  </body>
+</html>
